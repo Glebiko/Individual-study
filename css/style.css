@@ -147,8 +147,12 @@ body {
 
 .menu__link:hover {
   color: #000;
-  text-shadow: 0 0 0.2px currentColor, 0.2px 0 currentColor,
-    -0.2px 0 currentColor, 0 0.2px currentColor, 0 -0.2px currentColor;
+  text-shadow:
+    0 0 0.2px currentColor,
+    0.2px 0 currentColor,
+    -0.2px 0 currentColor,
+    0 0.2px currentColor,
+    0 -0.2px currentColor;
 }
 
 .social {
@@ -161,7 +165,9 @@ body {
 }
 
 .header__social .social__link svg {
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .header__social .social__link:hover svg {
@@ -186,7 +192,7 @@ body {
 .header__title {
   font-family: 'Raleway-Bold', sans-serif;
   font-weight: 700;
-  font-size: 128px;
+  font-size: clamp(58px, 10vw, 128px);
   line-height: 1.17;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -203,7 +209,9 @@ body {
   background-color: #00a9bd;
   padding: 22px 30px;
   border-radius: 30px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .booking:hover {
@@ -306,8 +314,8 @@ body {
 
 .tour-info__content-imagebox {
   position: relative;
-  width: 560px;
-  height: 587px;
+  flex: 1 1 32%;
+  aspect-ratio: 1 / 1;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -315,10 +323,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  counter-increment: number;
+}
+
+.tour-info__content-imagebox svg {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -25%);
 }
 
 .tour-info__content-textbox {
   margin-bottom: 45px;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -337,22 +353,22 @@ body {
   transform: scale(1.05);
 }
 
-.tour-info__content-num {
-  margin: auto;
-  display: inline-block;
-  padding: 6px 40px 4px 40px;
+.tour-info__content-imagebox::before {
+  position: absolute;
+  content: '0' counter(number);
+  left: 50%;
   font-size: 95px;
   line-height: 1.18;
   color: #fff;
   background-repeat: no-repeat;
   background-position: center;
-  transform: translateY(25%);
+  transform: translate(-50%, -25%);
 }
 
 .tour-info__content-text {
   margin-left: 30px;
   font-family: 'Raleway-Bold', sans-serif;
-  font-size: 32px;
+  font-size: clamp(24px, 2.5vw, 32px);
   line-height: 1.19;
   font-weight: 700;
   text-transform: uppercase;
@@ -380,7 +396,6 @@ body {
 .tour-hotels__inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   gap: 10px 10px;
 }
 
@@ -437,6 +452,7 @@ body {
 
 .tour-hotels__img {
   border-radius: 25px;
+  object-fit: cover;
 }
 
 .tour-hotels__map {
@@ -453,14 +469,16 @@ body {
   position: absolute;
   bottom: 0;
   left: 40px;
-  transition: color 0.3s ease, border-color 0.3s ease,
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
     background-color 0.3s ease;
 }
 
 .tour-hotels__link:hover {
-  color: #ccc;
-  border-color: #ebebeb;
-  background-color: #ebebeb;
+  color: #fff;
+  border-color: #ccc;
+  background-color: #ccc;
 }
 
 .tours-slider {
@@ -478,25 +496,32 @@ body {
 .tours-slider__img {
   display: inline-block;
   border-radius: 25px;
+  object-fit: cover;
 }
 
-.slider__buttons {
+.tours__slider-buttons {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
+  color: #00A9BD;
+  transition: color 0.3s ease;
+}
+
+.tours__slider-buttons:hover {
+  color: #ffe093;
 }
 
 .tours-slider__swiper-pagination {
   display: none;
 }
 
-.tours-slider__button-prev {
+.swiper-button-prev {
   left: 0;
 }
 
-.tours-slider__button-next {
+.swiper-button-next {
   right: 0;
 }
 

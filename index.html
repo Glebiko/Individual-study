@@ -110,8 +110,10 @@
             </p>
           </div>
           <div class="tour-info__content">
-            <div class="tour-info__content-imagebox" style="background-image: url('images/imagebox1.jpg');">
-              <span class="tour-info__content-num" style="background-image: url('../images/decor-oval.svg');">01</span>
+            <div class="tour-info__content-imagebox mobile-main" style="background-image: url('images/imagebox1.jpg');">
+              <svg width="178" height="114">
+                  <use xlink:href="images/sprite.svg#decor-oval"></use>
+              </svg>
               <a class="tour-info__content-textbox" href="#" aria-label="tour approval link">
                 <p class="tour-info__content-text">tour approval</p>
                 <img class="tour-info__content-img" src="images/imagebox-arrow.svg" alt="tour approval link for booking"
@@ -119,7 +121,9 @@
               </a>
             </div>
             <div class="tour-info__content-imagebox" style="background-image: url('images/imagebox2.jpg');">
-              <span class="tour-info__content-num" style="background-image: url('../images/decor-oval.svg');">02</span>
+              <svg width="178" height="114">
+                  <use xlink:href="images/sprite.svg#decor-oval"></use>
+              </svg>
               <a class="tour-info__content-textbox" href="#" aria-label="tour preparation link">
                 <p class="tour-info__content-text">Preparation</p>
                 <img class="tour-info__content-img" src="images/imagebox-arrow.svg"
@@ -127,7 +131,9 @@
               </a>
             </div>
             <div class="tour-info__content-imagebox" style="background-image: url('images/imagebox3.jpg');">
-              <span class="tour-info__content-num" style="background-image: url('images/decor-oval.svg');">03</span>
+              <svg width="178" height="114">
+                  <use xlink:href="images/sprite.svg#decor-oval"></use>
+              </svg>
               <a class="tour-info__content-textbox" href="#" aria-label="link for discover timetable">
                 <p class="tour-info__content-text">Beginning of the
                   journey</p>
@@ -146,7 +152,7 @@
           Comfortable accommodation
         </h2>
         <div class="tour-hotels__inner">
-          <div class="tour-hotels__content">
+          <div class="tour-hotels__content title-grid">
             <h2 class="tour-hotels__content-title left-star title">
               Hotels on this tour
             </h2>
@@ -158,7 +164,7 @@
             <img class="tour-hotels__img" src="images/hotels1.jpg" alt="light garden luxury pool nature" loading="lazy"
               width="1140" height="501">
           </figure>
-          <div class="tour-hotels__map" style="background-image: url(../images/tourmap-bg.png);"></div>
+          <div class="tour-hotels__map top-map" style="background-image: url(images/tourmap-bg.png);"></div>
           <figure class="tour-hotels__image-box">
             <img class="tour-hotels__img" src="images/hotels2.jpg" alt="light build luxury pool nature view"
               loading="lazy" width="560" height="500">
@@ -180,7 +186,7 @@
             <img class="tour-hotels__img" src="images/hotels4.jpg" alt="view pool water hotel territory" loading="lazy"
               width="559" height="497">
           </figure>
-          <div class="tour-hotels__map button-map" style="background-image: url(../images/tourmap-bg.png);">
+          <div class="tour-hotels__map button-map" style="background-image: url(images/tourmap-bg.png);">
             <a class="tour-hotels__link" href="#">
               More details
             </a>
@@ -197,29 +203,29 @@
 
         <div class="swiper tours-slider__swiper">
           <div class="swiper-wrapper tours-slider__swiper-wrapper">
-            <div class="swiper-slider">
+            <div class="swiper-slide">
               <img class="tours-slider__img" src="images/slider/1.jpg"
                 alt="Mountain in the background of lake New Zealand South Island road trip an itinerary for two weeks"
                 loading="lazy" width="1470" height="555">
             </div>
-            <div class="swiper-slider">
+            <div class="swiper-slide">
               <img class="tours-slider__img" src="images/slider/2.jpg"
                 alt="Mountain in the background of mountain river New Zealand South Island road trip an itinerary for two weeks"
                 loading="lazy" width="1470" height="555">
             </div>
-            <div class="swiper-slider">
+            <div class="swiper-slide">
               <img class="tours-slider__img" src="images/slider/3.jpg"
                 alt="Girl walkway in the steppe on the mountainside New Zealand South Island road trip an itinerary for two weeks"
                 loading="lazy" width="1470" height="555">
             </div>
           </div>
           <div class="swiper-pagination tours-slider__swiper-pagination"></div>
-          <button class="slider__buttons tours-slider__button-prev" aria-label="previous image button">
+          <button class="tours__slider-buttons swiper-button-prev" aria-label="previous image button">
             <svg width="78" height="28">
               <use xlink:href="images/sprite.svg#arrow-left"></use>
             </svg>
           </button>
-          <button class="slider__buttons tours-slider__button-next" aria-label="next image button">
+          <button class="tours__slider-buttons swiper-button-next" aria-label="next image button">
             <svg width="78" height="28">
               <use xlink:href="images/sprite.svg#arrow-right"></use>
             </svg>

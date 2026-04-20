@@ -1,8 +1,10 @@
 const menuBtn = document.querySelector('.menu__btn');
 const menu = document.querySelector('.menu');
+const bodyLock = document.querySelector('body');
 
 menuBtn.addEventListener('click', () => {
   menu.classList.toggle('menu--active');
+  bodyLock.classList.toggle('scroll-lock');
 });
 
 const swiper = new Swiper('.swiper', {
@@ -13,8 +15,8 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
   navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 
