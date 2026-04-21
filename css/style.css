@@ -538,8 +538,9 @@ body {
 }
 
 .questions__list {
-  max-width: 1140px;
+  max-width: 1640px;
   margin: 0 auto;
+  padding: 0 250px;
   display: flex;
   gap: 30px;
   flex-direction: column;
@@ -549,8 +550,9 @@ body {
 
 .questions__list::before {
   position: absolute;
-  top: 163px;
-  left: -250px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   content: '';
   background-image: url('../images/decor-questions.svg');
   background-repeat: no-repeat;
@@ -697,6 +699,7 @@ body {
 
 .footer__contacts-title {
   margin-bottom: 20px;
+  display: inline-block;
 }
 
 .address {
