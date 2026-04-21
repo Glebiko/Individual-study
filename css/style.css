@@ -499,7 +499,7 @@ body {
   object-fit: cover;
 }
 
-.tours__slider-buttons {
+.tours-slider__buttons {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -509,7 +509,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.tours__slider-buttons:hover {
+.tours-slider__buttons:hover {
   color: #ffe093;
 }
 
